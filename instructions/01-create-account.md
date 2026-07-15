@@ -24,7 +24,7 @@ Azure Cosmos DB を深く掘り下げる前に、最もよく使用するリソ�
 
 ### タスク 1: 新しい Azure Cosmos DB アカウントを作成する
 
-Azure Cosmos DB は複数の API をサポートするクラウドベースの NoSQL データベース サービスです。Azure Cosmos DB アカウントを初めてプロビジョニングする際は、アカウントでサポートする API（例: **API for MongoDB** や **API for NoSQL**）を選択します。
+Azure Cosmos DB は複数の API をサポートするクラウドベースの NoSQL データベース サービスです。Azure Cosmos DB アカウントを初めてプロビジョニングする際は、アカウントでサポートする API を選択します（例: **API for MongoDB** または **SQL API**）。
 
 1. 新しい Web ブラウザーのウィンドウまたはタブで、Azure ポータル (``portal.azure.com``) に移動します。
 
@@ -34,7 +34,7 @@ Azure Cosmos DB は複数の API をサポートするクラウドベースの N
 
     > &#128161; 代替手順: **&#8801;** メニューを展開し **All Services** を選択、**Databases** カテゴリで **Azure Cosmos DB** を選択してから **Create** を選びます。
 
-1. **Select API option** ウィンドウで、**Azure Cosmos DB for NoSQL** セクション内の **Create** オプションを選択します。
+1. **Select API option** ウィンドウで、**Core (SQL) - Recommended** セクション内の **Create** オプションを選択します。
 
 1. **Create Azure Cosmos DB Account** ウィンドウの **Basics** タブを確認します。
 
@@ -42,14 +42,18 @@ Azure Cosmos DB は複数の API をサポートするクラウドベースの N
 
     | **設定** | **値** |
     | --: | :-- |
-    | **Subscription** | *既存の Azure サブスクリプション* |
-    | **Resource Group** | *DP-420-DeploymentID* |
-    | **Account Name** | *グローバルに一意の名前を入力* |
-    | **Location** | *利用可能なリージョンを選択* |
-    | **Capacity mode** | *プロビジョニング済みスループットを選択* |
-    | **Apply Free Tier Discount** | *適用しない* |
+   
+ **Subscription** | *すべてのリソースはリソース グループに属し、すべてのリソース グループはサブスクリプションに属する必要があります。ここでは既存の Azure サブスクリプションを使用します。* |
+| **Resource Group** | *すべてのリソースはリソース グループに属する必要があります。ここでは既存のリソース グループを選択するか、新しいリソース グループを作成します。* |
+| **Account Name** | *グローバルに一意なアカウント名。この名前は要求の DNS アドレスの一部として使用されます。任意のグローバルに一意な名前を入力してください。ポータルがリアルタイムで名前を確認します。* |
+| **Location** | *データベースを最初にホストする地理的リージョンを選択します。利用可能な任意のリージョンを選択してください。* |
+| **Capacity mode** | *プロビジョニング済みスループットを選択* |
+| **Apply Free Tier Discount** | *適用しない* |
+
 
     >**注** : DeploymentID は各環境に関連付けられた一意の ID です。値は環境の詳細ページで確認できます。
+>             既存のリソース グループを使用する場合は、そのリソース グループを選択しても構いません。
+
 
 1. **Review + Create** を選択して **Review + Create** タブに移動し、続けて **Create** を選択します。
 
