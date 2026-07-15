@@ -42,7 +42,6 @@ lab:
 
 1. **PowerShell** を既定のターミナルとして設定してください
 
-### Visual Studio Code (and extensions)
 
 ### Visual Studio Code（および拡張機能）
 
